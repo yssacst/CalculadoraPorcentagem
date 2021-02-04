@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <title>Calculadora de Porcentagem</title>
+    </head>
+    <body>
+        <div class='container m-4 d-block'>
+            <h3>Calculadora de Porcentagens</h3>
+            <form action="/" method="post" class="border text-justify p-3">
+                <div class="form-group">
+                    <label>Informe a porcentagem</label>
+                    <input placeholder="Informe a porcentagem" id='percent' name='percent'/>
+                </div>
+                <div class="form-group">
+                    <label>Informe o valor</label>
+                    <input placeholder="Informe o Valor" id='valor' name='valor'/>
+                </div>
+                <button type="submit">Calcular</button>
+            </form>
+            <br/>
+            <h3>RESULTADO</h3>
+            {% if result %}
+            <p>{{percent}}% de {{valor}} é: {{result}}</p>
+            {% else %}
+            <p class="text-danger">Informe os valores</p>
+            {% endif %}
+        </div>
+
+    </body>
+</html>
